@@ -16,8 +16,11 @@ router.get("/new", (req, res, next) => {
 });
 
 router.post("/new", (req, res, next) => {
-  req.body;
-  messages.push({ text: Message, user: Author, added: new Date() });
+  messages.push({
+    text: req.body.Message,
+    user: req.body.Author,
+    added: new Date(),
+  });
   res.redirect("/");
 });
 
