@@ -1,0 +1,8 @@
+extends layout 
+
+block content
+    heading= heading 
+    form(action="/new", method='POST')
+        <input type='text' placeholder='Author' name='Author' minLength=3 maxLength=100>
+        <input type='text' placeholder='Message' name='Message' minLength=3 maxLength=100>
+        <button type='submit'>Submit</button>

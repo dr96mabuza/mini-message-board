@@ -3,3 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  div 
+    each ob in messages  
+      p= ob.text 
+      p= ob.user 
+      p= ob.added
